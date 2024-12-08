@@ -5,7 +5,14 @@ const employees = [
     //... More employee records can be added here
   ];
 function displayEmployees(){
-    const totalEmployees = employees.map((item, index) => `<p>Name: ${item.name} <p/><p>Age: ${item.age} <p/><p>Department: ${item.department} <p/><p>Salary: ${item.salary}<p/>`).join(""); 
+    const totalEmployees = employees.map(item => `
+        <div class="employee-card">
+            <p><strong>Name:</strong> ${item.name}</p>
+            <p><strong>Age:</strong> ${item.age}</p>
+            <p><strong>Department:</strong> ${item.department}</p>
+            <p><strong>Salary:</strong> ${item.salary}</p>
+        </div>
+    `).join("");
     document.getElementById('employeesDetails').innerHTML = totalEmployees;
 }
 
@@ -18,12 +25,26 @@ function calculateTotalSalaries(){
 function displayHREmployees(){
 
     const HREmployees = employees.filter(employee => employee.department == "HR");
-    const HREmployeesDetails = HREmployees.map((item, index) =>`<p>Name: ${item.name} <p/><p>Age: ${item.age} <p/><p>Department: ${item.department} <p/><p>Salary: ${item.salary}<p/>`).join("");
+    const HREmployeesDetails = HREmployees.map(item => `
+        <div class="employee-card">
+            <p><strong>Name:</strong> ${item.name}</p>
+            <p><strong>Age:</strong> ${item.age}</p>
+            <p><strong>Department:</strong> ${item.department}</p>
+            <p><strong>Salary:</strong> ${item.salary}</p>
+        </div>
+    `).join("");
     document.getElementById('employeesDetails').innerHTML = HREmployeesDetails;
 }
 
 function findEmployeeById(id){
     const IDEmployees = employees.filter(employee => employee.id == 2);
-    const IDEmployeesDetails = IDEmployees.map((item, index) =>`<p>Name: ${item.name} <p/><p>Age: ${item.age} <p/><p>Department: ${item.department} <p/><p>Salary: ${item.salary}<p/>`).join("");
+    const IDEmployeesDetails = IDEmployees.map(item => `
+        <div class="employee-card">
+            <p><strong>Name:</strong> ${item.name}</p>
+            <p><strong>Age:</strong> ${item.age}</p>
+            <p><strong>Department:</strong> ${item.department}</p>
+            <p><strong>Salary:</strong> ${item.salary}</p>
+        </div>
+    `).join("");
     document.getElementById('employeesDetails').innerHTML = IDEmployeesDetails;
 }

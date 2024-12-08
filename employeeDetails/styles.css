@@ -1,5 +1,6 @@
 /* styles.css */
 @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 body {
   display: flex;
@@ -13,6 +14,13 @@ body {
 
 h1 {
   margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3em;
+  color: #007bff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 div {
@@ -39,4 +47,28 @@ button:hover {
   margin-top: 20px;
   width: 100%;
   max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.employee-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: calc(33% - 40px);
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-10px);
+}
+
+.employee-card p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #333;
 }
