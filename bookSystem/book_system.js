@@ -30,12 +30,16 @@ function addBook(){
 
 }
 
-function showBooks(){
-    const booksDiv = books.map((book, index) => `<h1>Book Number: ${index + 1}</h1>
-    <p><strong>Book Name:</strong> ${book.name}</p>
-    <p><strong>Author Name:</strong> ${book.authorName}</p>
-    <p><strong>Book Description:</strong> ${book.bookDescription}</p>
-    <p><strong>No. of Pages:</strong> ${book.pagesNumber}</p>`);
+function showBooks() {
+    const booksDiv = books.map((book, index) => `
+        <div class="book-card">
+            <h1>Book Number: ${index + 1}</h1>
+            <p><strong>Book Name:</strong> ${book.name}</p>
+            <p><strong>Author Name:</strong> ${book.authorName}</p>
+            <p><strong>Book Description:</strong> ${book.bookDescription}</p>
+            <p><strong>No. of Pages:</strong> ${book.pagesNumber}</p>
+        </div>
+    `);
 
     document.getElementById('books').innerHTML = booksDiv.join('');
 }

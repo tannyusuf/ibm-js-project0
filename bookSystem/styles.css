@@ -1,0 +1,93 @@
+/* styles.css */
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #e9ecef;
+  font-family: 'Open Sans', sans-serif;
+  color: #343a40;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #495057;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background: #6c757d;
+  transition: background 0.3s ease;
+  margin-bottom: 20px; /* Add margin-bottom to create space */
+}
+
+button:hover {
+  background: #5a6268;
+}
+
+h2 {
+  margin-top: 20px; /* Optional: Add margin-top to create additional space */
+}
+
+#books {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+}
+
+.book-card h1 {
+  font-size: 1.5em;
+  color: #495057;
+}
+
+.book-card p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #343a40;
+}
